@@ -18,7 +18,6 @@ export default function App() {
     
     
         />
-        <h2>'hello"</h2>
         <Statistics
         title ={"Upload Stats"}
         stats ={statisticsData}

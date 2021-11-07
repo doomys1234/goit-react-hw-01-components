@@ -2,9 +2,9 @@
 import PropTypes from 'prop-types';
 
 
-export default function Statistics({stats}) {
+export default function Statistics({title,stats}) {
     return <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+      {title && <h2>{ title}</h2>}
 
         <ul class="stat-list">
         {stats.map(item => (
@@ -18,6 +18,7 @@ export default function Statistics({stats}) {
 }
 
 Statistics.prototype = {
+  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(PropTypes.shape({
     id:PropTypes.string.isRequired,
   })),

@@ -8,7 +8,8 @@ import TransactionHistory from './components/Transactions/TransactionHistory'
 import transactionsData from './components/Transactions/transactions.json'
 export default function App() {
     return <div>
-    <UserMarkup
+        <UserMarkup
+        
         imageUrl={user.avatar}
         name={user.name}
         tag={user.tag}
@@ -16,7 +17,8 @@ export default function App() {
         stats={user.stats}
     
     
-    />
+        />
+        <h2>'hello"</h2>
         <Statistics
         title ={"Upload Stats"}
         stats ={statisticsData}

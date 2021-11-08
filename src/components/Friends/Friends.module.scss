@@ -1,0 +1,33 @@
+.list{
+    width: 400px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    list-style: none;
+
+}
+.item{
+    display: flex;
+    align-items: center;
+    width: 400px;
+    padding: 5px;
+    border: 1px solid rgba(150, 149, 149, 0.767);
+    border-radius: 5px;
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
+
+.image{
+    display: block;
+    margin-right: 20px;
+}
+
+.span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+}

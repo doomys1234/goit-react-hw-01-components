@@ -15,6 +15,7 @@ export default function App() {
         tag={user.tag}
         location={user.location}
         stats={user.stats}
+        
     
     
         />

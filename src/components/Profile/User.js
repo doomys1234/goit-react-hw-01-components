@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 
-export default function UserMarkup({ imageUrl, name, tag, location, stats }) {
+export default function UserMarkup({ imageUrl, name, tag, location, stats}) {
   return (
     <div className={s.container}>
       <div className={s.description}>
@@ -31,11 +31,9 @@ export default function UserMarkup({ imageUrl, name, tag, location, stats }) {
 }
 
 UserMarkup.propTypes = {
-  imageUrl: PropTypes.string,
-  name: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  imageUrl: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
 };

@@ -7,10 +7,10 @@ export default function Statistics({title,stats}) {
       {title && <h2 className={s.title}>{ title}</h2>}
 
         <ul className={s.list}>
-        {stats.map(item => (
-      <li key={item.id} className={s.item}>
-        <span className={s.label}>{ item.label}</span>
-        <span className={s.percentage}>{item.percentage}%</span>
+        {stats.map(({id, label, percentage}) => (
+      <li key={id} className={s.item}>
+        <span className={s.label}>{label}</span>
+        <span className={s.percentage}>{percentage}%</span>
     </li>
   ) )}
   </ul>
@@ -18,8 +18,9 @@ export default function Statistics({title,stats}) {
 }
 
 Statistics.prototype = {
-  title: PropTypes.string.isRequired,
   stats: PropTypes.arrayOf(PropTypes.shape({
-    id:PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
   })),
 }

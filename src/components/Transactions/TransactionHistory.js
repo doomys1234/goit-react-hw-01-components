@@ -10,11 +10,11 @@ export default function TransactionHistory({ transactions }) {
         </tr>
       </thead>
       <tbody className={s.tableBody}>
-      {transactions.map(item => (
-        <tr key={item.id}>
-          <td className={s.item}>{item.type}</td>
-          <td className={s.item}>{item.amount}</td>
-          <td className={s.item}>{item.currency}</td>
+      {transactions.map(({id,type,amount,currency}) => (
+        <tr key={id}>
+          <td className={s.item}>{type}</td>
+          <td className={s.item}>{amount}</td>
+          <td className={s.item}>{currency}</td>
         </tr>
         ))}
       </tbody> 
@@ -24,6 +24,9 @@ export default function TransactionHistory({ transactions }) {
 
 TransactionHistory.prototype = {
     transactions:PropTypes.arrayOf(PropTypes.shape({
-        id:PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string,
+      amount: PropTypes.number,
+      currency:PropTypes.string,
     }),),
 }
